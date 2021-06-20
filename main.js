@@ -50,7 +50,7 @@ const pointLight = new THREE.PointLight(0xffffff);
 
  Array(200).fill().forEach(addStar);
 
- const spaceTexture = new THREE.TextureLoader().load('galaxy.jpg');
+ const spaceTexture = new THREE.TextureLoader().load('/galaxy.jpg');
  scene.background = spaceTexture;
  
 // Game Loop
@@ -65,7 +65,7 @@ function animate() {
 }
 
 // Avatar
-const danTexture = new THREE.TextureLoader().load('dan.jpeg');
+const danTexture = new THREE.TextureLoader().load('/dan.jpeg');
 
 const dan = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
@@ -78,8 +78,8 @@ scene.add(dan);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpeg');
-const normalTexture = new THREE.TextureLoader().load('moon-normal.jpeg');
+const moonTexture = new THREE.TextureLoader().load('/moon.jpeg');
+const normalTexture = new THREE.TextureLoader().load('/moon-normal.jpeg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
